@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=320" />
+	<meta name="MobileOptimized" content="width=320" />
+	<title>Obrigado, seu pedido é aceito!</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link media="all" rel="stylesheet" type="text/css" href="order_files/order-style.css" />
+
+</head>
+<body>
+	<div id="wrapper">
+		<div class="order-block">
+			<span class="decoration"></span>
+			<div class="text-holder">
+				<h2><span>Obrigado</span> seu pedido é aceito!</h2>
+				<p>Nosso operador entrará em contato para confirmar o pedido. <br /> A entrega é realizada por correio ou correio. Pagamento - após o recebimento!</p>
+			</div>
+			<div class="text-box">
+				<h2>Participe <span>na ação!</span></h2>
+				<p>Para participar da promoção e monitorar o status do seu pedido, digite o e-mail e clique em "Salvar"!</p>
+				<form class="order-form" action="http://nedil-shop.ru/send_Portugal.php" id="email_form" method="post" onsubmit="javascript:return validate('email_form','email');">
+					<fieldset>
+						<div class="text">
+							<input type="text" placeholder="Digite seu e-mail..." name="email"/>
+							<input name="site" type="hidden" value="deeper">
+						</div>
+						<input class="btn-save" type="submit" value="Salvar" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+  <script>
+		function validate(email_form,email) {
+			   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			   var address = document.forms[email_form].elements[email].value;
+			   if(reg.test(address) == false) {
+				  alert('Por favor insira um e-mail válido');
+				  return false;
+			   }
+		}
+	</script>	
+</body>
+</html>
